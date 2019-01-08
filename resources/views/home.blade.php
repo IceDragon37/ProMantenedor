@@ -1,23 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Login Exitoso</div>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="content">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Ahora estas dentro!
-                </div>
-            </div>
-        </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="">AFP</a>
+                </li>
+                <li>
+                    <a href="#">Managers</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-</div>
+
+
 @endsection

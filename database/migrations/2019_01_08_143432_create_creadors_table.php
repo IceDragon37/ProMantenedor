@@ -13,12 +13,15 @@ class CreateCreadorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('creadors', function (Blueprint $table) {
+        Schema::defaultStringLength(191);
+        Schema::create('creadores', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->string('email');
+            $table->string('password');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -26,6 +29,6 @@ class CreateCreadorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('creadors');
+        Schema::dropIfExists('creadores');
     }
 }

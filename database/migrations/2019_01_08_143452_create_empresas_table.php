@@ -13,12 +13,16 @@ class CreateEmpresasTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('empresas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('IdEmpresa');
+            $table->string('Industria');
+            $table->string('NombreCorto');
+            $table->smallInteger('TipoCliente');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
